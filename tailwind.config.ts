@@ -22,10 +22,20 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          soft: "hsl(var(--primary-soft))",
+          hover: "hsl(var(--primary-hover))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -47,6 +57,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Wellness color system
+        wellness: {
+          calm: "hsl(var(--wellness-calm))",
+          energy: "hsl(var(--wellness-energy))",
+          growth: "hsl(var(--wellness-growth))",
+          focus: "hsl(var(--wellness-focus))",
+          heart: "hsl(var(--wellness-heart))",
+          peace: "hsl(var(--wellness-peace))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +81,23 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        'wellness': 'var(--shadow-wellness)',
+        'soft': 'var(--shadow-soft)',
+        'elevated': 'var(--shadow-elevated)',
+      },
+      backgroundImage: {
+        'gradient-wellness': 'var(--gradient-wellness)',
+        'gradient-calm': 'var(--gradient-calm)',
+        'gradient-energy': 'var(--gradient-energy)',
+        'gradient-growth': 'var(--gradient-growth)',
+        'gradient-focus': 'var(--gradient-focus)',
+        'gradient-heart': 'var(--gradient-heart)',
+      },
+      transitionTimingFunction: {
+        'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        'bounce': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
       },
       keyframes: {
         "accordion-down": {

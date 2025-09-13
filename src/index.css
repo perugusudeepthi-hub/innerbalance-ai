@@ -8,35 +8,71 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Wellness-focused design system with calming colors */
+    --background: 217 33% 97%;
+    --foreground: 215 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Calming blue-purple primary palette */
+    --primary: 214 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 214 100% 95%;
+    --primary-hover: 214 100% 55%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Soft secondary colors */
+    --secondary: 213 27% 94%;
+    --secondary-foreground: 215 25% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 213 27% 94%;
+    --muted-foreground: 215 13% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 213 27% 94%;
+    --accent-foreground: 215 25% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Wellness color palette */
+    --wellness-calm: 214 100% 60%;
+    --wellness-energy: 35 100% 60%;
+    --wellness-growth: 142 76% 36%;
+    --wellness-focus: 261 83% 58%;
+    --wellness-heart: 339 82% 52%;
+    --wellness-peace: 154 100% 50%;
+    
+    /* Status colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 35 100% 60%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* UI elements */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 214 100% 60%;
 
-    --radius: 0.5rem;
+    /* Gradients */
+    --gradient-wellness: linear-gradient(135deg, hsl(214 100% 60%), hsl(261 83% 58%));
+    --gradient-calm: linear-gradient(135deg, hsl(214 100% 85%), hsl(214 100% 95%));
+    --gradient-energy: linear-gradient(135deg, hsl(35 100% 85%), hsl(35 100% 95%));
+    --gradient-growth: linear-gradient(135deg, hsl(142 76% 85%), hsl(142 76% 95%));
+    --gradient-focus: linear-gradient(135deg, hsl(261 83% 85%), hsl(261 83% 95%));
+    --gradient-heart: linear-gradient(135deg, hsl(339 82% 85%), hsl(339 82% 95%));
+
+    /* Shadows for depth */
+    --shadow-soft: 0 2px 8px hsl(214 32% 91% / 0.6);
+    --shadow-wellness: 0 8px 32px hsl(214 100% 60% / 0.15);
+    --shadow-elevated: 0 12px 40px hsl(214 32% 70% / 0.25);
+
+    /* Animation variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +92,59 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 215 28% 8%;
+    --foreground: 213 27% 94%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 25% 12%;
+    --card-foreground: 213 27% 94%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 25% 12%;
+    --popover-foreground: 213 27% 94%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 214 100% 70%;
+    --primary-foreground: 215 28% 8%;
+    --primary-soft: 214 100% 15%;
+    --primary-hover: 214 100% 75%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 215 25% 16%;
+    --secondary-foreground: 213 27% 94%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 25% 16%;
+    --muted-foreground: 215 13% 55%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 215 25% 16%;
+    --accent-foreground: 213 27% 94%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    /* Dark mode wellness colors */
+    --wellness-calm: 214 100% 70%;
+    --wellness-energy: 35 100% 70%;
+    --wellness-growth: 142 76% 50%;
+    --wellness-focus: 261 83% 68%;
+    --wellness-heart: 339 82% 62%;
+    --wellness-peace: 154 100% 60%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --success: 142 76% 50%;
+    --success-foreground: 215 28% 8%;
+    --warning: 35 100% 70%;
+    --warning-foreground: 215 28% 8%;
+    --destructive: 0 72% 61%;
+    --destructive-foreground: 213 27% 94%;
+
+    --border: 215 25% 16%;
+    --input: 215 25% 16%;
+    --ring: 214 100% 70%;
+
+    /* Dark gradients */
+    --gradient-wellness: linear-gradient(135deg, hsl(214 100% 70%), hsl(261 83% 68%));
+    --gradient-calm: linear-gradient(135deg, hsl(214 100% 20%), hsl(214 100% 15%));
+    --gradient-energy: linear-gradient(135deg, hsl(35 100% 20%), hsl(35 100% 15%));
+    --gradient-growth: linear-gradient(135deg, hsl(142 76% 20%), hsl(142 76% 15%));
+    --gradient-focus: linear-gradient(135deg, hsl(261 83% 20%), hsl(261 83% 15%));
+    --gradient-heart: linear-gradient(135deg, hsl(339 82% 20%), hsl(339 82% 15%));
+
+    --shadow-soft: 0 2px 8px hsl(215 28% 5% / 0.8);
+    --shadow-wellness: 0 8px 32px hsl(214 100% 70% / 0.2);
+    --shadow-elevated: 0 12px 40px hsl(215 28% 5% / 0.6);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +162,71 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+}
+
+@layer components {
+  /* Wellness-specific component classes */
+  .wellness-card {
+    @apply bg-card rounded-xl shadow-[var(--shadow-soft)] border border-border p-6 transition-all duration-300 hover:shadow-[var(--shadow-wellness)];
+  }
+
+  .wellness-gradient {
+    background: var(--gradient-wellness);
+  }
+
+  .wellness-button {
+    @apply bg-primary text-primary-foreground hover:bg-primary-hover px-6 py-3 rounded-lg font-medium transition-[var(--transition-smooth)] shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-wellness)] active:scale-95;
+  }
+
+  .wellness-input {
+    @apply bg-background border border-input rounded-lg px-4 py-2 text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-ring focus:border-transparent transition-[var(--transition-smooth)];
+  }
+
+  .mood-button {
+    @apply p-3 rounded-xl border-2 border-border hover:border-primary/50 transition-[var(--transition-bounce)] hover:scale-105 active:scale-95 bg-card;
+  }
+
+  .mood-button.active {
+    @apply border-primary bg-primary/5 scale-110 shadow-[var(--shadow-wellness)];
+  }
+
+  .wellness-progress-bar {
+    @apply w-full bg-muted rounded-full h-2 overflow-hidden;
+  }
+
+  .wellness-progress-fill {
+    @apply h-full rounded-full transition-all duration-500 ease-out;
+  }
+
+  /* Status badges */
+  .status-positive {
+    @apply bg-success/10 text-success border border-success/20 px-2 py-1 rounded-md text-xs font-medium;
+  }
+
+  .status-negative {
+    @apply bg-destructive/10 text-destructive border border-destructive/20 px-2 py-1 rounded-md text-xs font-medium;
+  }
+
+  .status-neutral {
+    @apply bg-muted text-muted-foreground border border-border px-2 py-1 rounded-md text-xs font-medium;
   }
 }
